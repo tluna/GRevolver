@@ -29,6 +29,9 @@ inage
 ### make
 tluna
 
+### 資料
+https://developers.google.com/drive/training/drive-apps/auth/about?hl=ja
+
 ## 利用すると思われるライブラリについて話したもの
 
 22:28
