@@ -29,6 +29,10 @@ inage
 ### make
 tluna
 
+### 資料
+https://developers.google.com/drive/training/drive-apps/auth/about?hl=ja
+http://www.eisbahn.jp/yoichiro/2012/10/google-drive-api-ruby-on-rails.html
+
 ## 利用すると思われるライブラリについて話したもの
 
 22:28
