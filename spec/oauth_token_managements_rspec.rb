@@ -5,7 +5,7 @@ requrie "oauth_token_managements"
 
 describe OauthTokenManagement do
   share_examples_for "トークンがある場合" do
-  
+
     context "トークンの有効期限を確認" do
     end
     context "トークンの認証" do
