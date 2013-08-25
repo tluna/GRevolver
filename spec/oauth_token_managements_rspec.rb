@@ -9,7 +9,6 @@ describe OauthTokenManagement do
     context "トークンの有効期限を確認" do
     end
     context "トークンの認証" do
-      #GoogleDriveにOauthでアプリケーションの承認を求める
     end
     context "accessトークンとリフレッシュトークンをもらう" do
       #データベースに格納する
@@ -22,6 +21,7 @@ describe OauthTokenManagement do
     context "メールアドレスの取得" do
     end
     context "承認コードを受け取る" do
+      #GoogleDriveにOauthでアプリケーションの承認を求める
       #ユーザーが承認すると、リダイレクトされるURLのcodeパラメータにある承認コードが貰える
       #権限無効とトークンの期限切れ以外は再認証で権限を付与してもらうように、ユーザーをリダイレクトすること。
     end
