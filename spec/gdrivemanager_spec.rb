@@ -6,13 +6,6 @@ require 'gdrivemanager'
 describe GDriveManager do
   # ファイルアップロード
   describe '#putfile' do
-    # トークン異常系
-    context 'アクセストークンなし' do
-    end
-    context 'アクセストークン期限切れ' do
-    end
-    context 'アクセストークン認証失敗' do
-    end
 
     # ファイル正常系
     context '同一名称のファイルなし' do
@@ -39,17 +32,10 @@ describe GDriveManager do
     # アップロード処理中エラー(色々まとめて もし戻せるなら戻して処理を再開するフローがほしい)
     context 'ファイルアップロードエラー' do
     end
-
   end
 
+  # ファイル取得
   describe '#getfile' do
-    # トークン異常系
-    context 'アクセストークンなし' do
-    end
-    context 'アクセストークン期限切れ' do
-    end
-    context 'アクセストークン認証失敗' do
-    end
 
     # ファイルアクセス異常
     context '登録されているファイルが1件も無い' do
@@ -58,33 +44,21 @@ describe GDriveManager do
     end
 
     # ファイルダウンロード中エラー(URL返却しちゃうから不要のはず)
+
   end
 
+  # ファイル一覧取得
   describe '#getfilelist' do
-    # トークン異常系
-    context 'アクセストークンなし' do
-    end
-    context 'アクセストークン期限切れ' do
-    end
-    context 'アクセストークン認証失敗' do
-    end
 
     # ファイルアクセス異常
     context 'ファイルが一件も登録されていない' do
     end
     context 'ファイルIDが登録されていないレコードが存在' do
     end
-
   end
 
+  # ファイル検索
   describe '#searchfile' do
-    # トークン異常系
-    context 'アクセストークンなし' do
-    end
-    context 'アクセストークン期限切れ' do
-    end
-    context 'アクセストークン認証失敗' do
-    end
 
     # ファイルアクセス異常
     context 'ファイルが一件も登録されていない' do
@@ -96,14 +70,8 @@ describe GDriveManager do
 
   end
 
+  # ファイル置換
   describe '#replacefile' do
-    # トークン異常系
-    context 'アクセストークンなし' do
-    end
-    context 'アクセストークン期限切れ' do
-    end
-    context 'アクセストークン認証失敗' do
-    end
 
     # ファイルアクセス異常(全アカウント対象)
     context 'ファイルが一件も登録されていない' do
@@ -126,18 +94,24 @@ describe GDriveManager do
     # アップロード処理中エラー(色々まとめて もし戻せるなら戻して処理を再開するフローがほしい)
     context 'ファイルアップロードエラー' do
     end
-
   end
 
+  # ファイル削除
   describe '#deletefile' do
-    # トークン異常系
-    context 'アクセストークンなし' do
-    end
-    context 'アクセストークン期限切れ' do
-    end
-    context 'アクセストークン認証失敗' do
-    end
 
     # ファイル存在エラー
+    context '指定ファイルID存在しない' do
+    end
+    context 'ファイルIDに紐づくファイルが存在しない' do
+    end
+    # ファイルアクセス異常(全アカウント対象)
+    context 'ファイルが一件も登録されていない' do
+    end
+    context '指定したファイルIDでの登録がない' do
+    end
 
+    # ファイルアクセス異常(アカウント指定)
+    context '該当ファイルが登録されていない' do
+    end
   end
+end
