@@ -4,13 +4,13 @@ require "rspec"
 require "oauth_token_managements"
 
 describe OauthTokenManagement do
-  share_examples_for "トークンがある場合" do
+  share_examples_for "リフレッシュトークンがある場合" do
 
-    context "トークンの有効期限を確認" do
+    context "accessトークンの有効期限を確認" do
     end
-    context "トークンの認証" do
+    context "リフレッシュトークンの認証" do
     end
-    context "accessトークンとリフレッシュトークンをもらう" do
+    context "accessトークンをもらう" do
       #データベースに格納する
     end
   end
@@ -30,9 +30,19 @@ describe OauthTokenManagement do
     end
   end
 
-  context "エラーの種別を判定" do
-    #Ivalid Credentialsはユーザが権限を無効化
+  context "有効期限内のaccessトークンを持っている場合" do
+    #成功を返す？
   end
+  
+  context "期限切れのaccessトークンを持っている場合" do
+    context "エラーの種別を判定" do
+      #Ivalid Credentialsはユーザが権限を無効化
+      its_shouled_behave_like "リフレッシュトークンがある場合"    
+    end
+    
+  end
+
+
 
 end
 
