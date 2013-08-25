@@ -149,6 +149,7 @@ describe GDriveManager do
 
   # ファイル削除
   describe '#deletefile' do
+    # 不要
     share_examples_for "認証失敗時" do
     end
 

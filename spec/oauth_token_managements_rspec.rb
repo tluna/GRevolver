@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 require "rubygems"
 require "rspec"
-requrie "oauth_token_managements"
+require "oauth_token_managements"
 
 describe OauthTokenManagement do
   share_examples_for "トークンがある場合" do
