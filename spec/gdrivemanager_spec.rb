@@ -141,3 +141,4 @@ describe GDriveManager do
     # ファイル存在エラー
 
   end
+end
