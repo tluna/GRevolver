@@ -6,6 +6,34 @@ require 'gdrivemanager'
 describe GDriveManager do
   # ファイルアップロード
   describe '#putfile' do
+    # 認証無効時
+
+    # 認証有効時
+    # ファイル正常系
+    context '同一名称のファイルなし' do
+    end
+    context '同一名称のファイルあり' do
+    end
+
+    # ファイル異常系
+    context 'ファイルサイズ0' do
+    end
+    context 'ファイルサイズが5GB以上' do
+    end
+    context 'ファイルサイズ名にファイル名として利用できない文字' do
+    end
+
+    # アカウント異常系
+    context 'アップロード試行したアカウントの容量オーバー' do
+    end
+    context 'ファイルアップロードできるアカウントが存在しない' do
+    end
+    context 'ファイルアップロードできるアカウントが存在しない(アカウントの容量がすべていっぱい)' do
+    end
+
+    # アップロード処理中エラー(色々まとめて もし戻せるなら戻して処理を再開するフローがほしい)
+    context 'ファイルアップロードエラー' do
+    end
 
     # ファイル正常系
     context '同一名称のファイルなし' do

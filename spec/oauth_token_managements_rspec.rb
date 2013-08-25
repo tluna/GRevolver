@@ -26,7 +26,7 @@ describe OauthTokenManagement do
       #権限無効とトークンの期限切れ以外は再認証で権限を付与してもらうように、ユーザーをリダイレクトすること。
     end
     its_shouled_behave_like "トークンがある場合"
-    context "リフレッシュトークンとメールアドレスをユーザーIDでインデックス付けして保存" do      
+    context "リフレッシュトークンとメールアドレスをユーザーIDでインデックス付けして保存" do
     end
   end
 
