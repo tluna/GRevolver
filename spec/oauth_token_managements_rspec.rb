@@ -4,35 +4,35 @@ require "rspec"
 requrie "oauth_token_managements"
 
 describe OauthTokenManagement do
-
-  share_examples_for "トークンを持っている場合" do
-=begin    
-  end
-    before "トークン取得" do
-      @token ={:access_token => "access_token",:refresh_token => "refresh_token"}
-      @user = {:id => "userid",:email =>"user@gmail.com"}
-    end
-=end
-      its(:token) { should_not be_empty }
-      it { }
-    end
-  end
+  share_examples_for "トークンがある場合" do
   
-nend
-トークンを持っているか確認
-トークンの有効期限を確認
-トークンの認証
-ユーザーIDの取得
-メールアドレスの取得
-2
-ユーザー認証にはUserInfoServiceを呼び出して、ユーザーIDとプロフィールを取得する
-新しい承認コードを受け取るたびに認証を実行する
-エラーの種別を判定
-Ivalid Credentialsはユーザが権限を無効化
-権限無効とトークンの期限切れ以外は再認証で権限を付与してもらうように、ユーザーをリダイレクトすること。
-初回承認フロー
-GoogleDriveにOauthでアプリケーションの承認を求める
-ユーザーが承認すると、リダイレクトされるURLのcodeパラメータにある承認コードが貰える
-accessトークンとリフレッシュトークンをもらう
-リフレッシュトークンとメールをユーザーIDでインデックス付けして保存
-DriveAPIにリクエストを送る
+    context "トークンの有効期限を確認" do
+    end
+    context "トークンの認証" do
+#GoogleDriveにOauthでアプリケーションの承認を求める
+    end
+    context "accessトークンとリフレッシュトークンをもらう" do
+      #データベースに格納する
+    end
+  end
+
+  context "初回認証フロー" do
+    context "ユーザーIDの取得"do
+    end
+    context "メールアドレスの取得" do
+    end
+    context "承認コードを受け取る" do
+#ユーザーが承認すると、リダイレクトされるURLのcodeパラメータにある承認コードが貰える
+      #権限無効とトークンの期限切れ以外は再認証で権限を付与してもらうように、ユーザーをリダイレクトすること。
+    end
+    its_shouled_behave_like "トークンがある場合"
+    context "リフレッシュトークンとメールアドレスをユーザーIDでインデックス付けして保存" do      
+    end
+  end
+
+  context "エラーの種別を判定" do
+    #Ivalid Credentialsはユーザが権限を無効化
+  end
+
+end
+
