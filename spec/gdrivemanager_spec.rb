@@ -1,9 +1,25 @@
 # coding: utf-8
 
 require 'rspec'
-require 'gdrivemanager'
+require '../gdrivemanager'
 
 describe GDriveManager do
+  share_examples_for "GDriveManager" do
+    
+  end
+  
+  context "#getlist" do
+    context "ファイルの一覧を取得する" do
+      subject {GDriveManager.new}
+      its(:getlist){ should_not be_empty}
+    end
+  end
+
+  context "#getlist('test')" do
+    it "タグ'test'の付いたファイルの一覧を取得する" do
+      GDriveManager.getlist("test").name.should == "テストファイル"      
+    end
+  end
   # ファイルアップロード
   describe '#putfile' do
     # 認証失敗時
