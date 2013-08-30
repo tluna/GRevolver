@@ -1,7 +1,7 @@
 作業分担
 =========
 
-## GoogleDriveへのアクセスを行う
+## アップローダの設計
 
 type |    method|   params|
 -----|----------|---------|
@@ -29,6 +29,11 @@ inage
 inage
 ### make
 tluna
+
+参考資料
+gem google_drive
+http://gimite.net/doc/google-drive-ruby/GoogleDrive.html#method-c-login_with_oauth
+
 
 ## 利用すると思われるライブラリについて話したもの
 
@@ -76,13 +81,6 @@ https://developers.google.com/drive/training/drive-apps/auth/credentials?hl=ja
 inage
 https://developers.google.com/adsense/tutorials/oauth-generic?hl=ja
 
-22:53
-inage
-https://developers.google.com/adsense/tutorials/oauth-generic?hl=ja
-
-23:33
-inage
-すかいぷみー
 
 23:47
 inage
@@ -97,5 +95,3 @@ inage
 inage
 http://www.ruby.or.jp/ja/tech/development/ruby/055_test.html
 
-Rubyアソシエーション: テスト
-www.ruby.or.jp
