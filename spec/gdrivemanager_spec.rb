@@ -1,7 +1,7 @@
 # coding: utf-8
 
 require "rspec"
-require "../lib/gdrivemanager"
+require "./lib/gdrivemanager"
 
 describe GDriveManager do
   share_examples_for "GDriveManager" do
